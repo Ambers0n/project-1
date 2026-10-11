@@ -1,0 +1,548 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  min-height: 100vh;
+  position: relative;
+  background-image: url("./img/space-background.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* next section */
+
+header {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  padding: 30px;
+}
+.first {
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.navigation ul {
+  display: flex;
+  gap: 50px;
+}
+.navigation li {
+  list-style: none;
+
+  transition: transform 300ms ease-in-out;
+}
+.navigation li:hover {
+  transform: translateX(-5px);
+}
+.navigation a {
+  text-decoration: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+.navigation a:hover {
+  color: rgb(173, 124, 236);
+}
+
+/* next section */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 76vh;
+  text-align: center;
+  color: white;
+  background: none;
+}
+.main_q {
+  margin-top: 25px;
+  padding: 12px 20px;
+  cursor: pointer;
+}
+.main_q h2 {
+  font-size: 50px;
+}
+.main_q p {
+  margin-top: 20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.main_btn {
+  font-size: 28px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: 2px solid rgb(136, 51, 247);
+  box-shadow: 5px 5px 10px 2px rgba(136, 33, 196, 0.5);
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 15px 25px;
+  text-decoration: none;
+  transition: transform 400ms ease-in-out;
+  align-items: center;
+}
+.main_btn:hover {
+  box-shadow: 5px 5px 10px 2px rgba(173, 124, 236, 1);
+  border: 2px solid rgb(173, 124, 236);
+  transform: translateY(-5px);
+}
+
+/* next section */
+
+.space {
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  margin-bottom: 250px;
+}
+.space_text {
+  width: 70%;
+}
+.space_text h2 {
+  margin-bottom: 22px;
+}
+.space_text p {
+  line-height: 50px;
+  font-weight: 400;
+}
+
+/* next section */
+
+.galaxies {
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 60px;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 22px;
+  margin-bottom: 150px;
+}
+.galaxies_container {
+  display: flex;
+  align-items: center;
+  background-color: rgb(136, 51, 247);
+  margin-bottom: 50px;
+  border-radius: 55px;
+  max-width: 70%;
+  margin-left: 300px;
+}
+.galaxies_text {
+  position: relative;
+
+  flex: 1;
+  padding-right: 80px;
+}
+.galaxies_text h3 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.galaxies_text p {
+  font-size: 22px;
+  line-height: 50px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+.galaxies_text a {
+  color: #f39c12;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.galaxies_text a:hover {
+  color: #e67e22;
+}
+.galaxies_images {
+  flex: 0 0 auto;
+  max-width: 400px;
+}
+.galaxies_images img {
+  width: 400px;
+  border-radius: 50px;
+  margin-top: 15px;
+
+  padding-right: 15px;
+}
+.galaxies_btn {
+  display: flex;
+  margin-bottom: 35px;
+  align-items: center;
+  justify-content: center;
+}
+.qwe {
+  width: 200px;
+  height: 50px;
+  font-size: 28px;
+  background-color: transparent;
+  border-radius: 25px;
+  border: solid 2px rgb(136, 51, 247);
+  color: white;
+  box-shadow: 5px 5px 10px 2px rgba(136, 33, 196, 0.5);
+  transition: 500ms ease-in-out;
+}
+.qwe:hover {
+  box-shadow: 5px 5px 10px 2px rgba(173, 124, 236, 1);
+  border: 2px solid rgb(173, 124, 236);
+  transform: translateY(-5px);
+}
+.galaxies_our {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.milky_way {
+  width: 1000px;
+  z-index: 2;
+  background-color: rgb(136, 51, 247);
+  margin: 55px;
+  border-radius: 30px;
+  transition: 350ms ease-in-out;
+}
+.M87 {
+  width: 700px;
+  height: 850px;
+  background-color: rgb(136, 51, 247);
+  margin: 55px;
+  border-radius: 30px;
+  transition: 350ms ease-in-out;
+}
+.milky_way h2 {
+  font-size: 35px;
+  font-weight: 800;
+  text-align: left;
+  padding-left: 15px;
+}
+.M87 h2 {
+  font-size: 35px;
+  font-weight: 800;
+  text-align: left;
+  padding-left: 15px;
+}
+.milky_way,
+.M87 p {
+  font-size: 22px;
+  line-height: 40px;
+  max-width: 700px;
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.milky_way img {
+  width: 600px;
+  position: relative;
+  border-radius: 15px;
+}
+.M87 img {
+  width: 600px;
+  height: 550px;
+  border-radius: 15px;
+}
+.milky_way:hover {
+  transform: translateY(-5px);
+}
+.M87:hover {
+  transform: translateY(-5px);
+}
+
+/* next section */
+
+.solar_system {
+  padding: 50px;
+}
+.solar_text {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.solar_text h2 {
+  font-size: 2em;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.solar_text p {
+  font-size: 22px;
+  line-height: 50px;
+  color: #ffffff;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-weight: 500;
+}
+.solar_text img {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 20px;
+  border: 1px white solid;
+  box-shadow: 1px 1px 5px 1px white;
+  transition: 350ms ease-in-out;
+  cursor: pointer;
+}
+.solar_text img:hover {
+  transform: translateY(-20px);
+  box-shadow: -2px -2px 4px 2px rgb(255, 255, 255);
+}
+.all_palnets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.planets {
+  background-color: rgb(0, 0, 0);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(88, 87, 87, 0.1);
+  flex-basis: 30%;
+  max-width: 30%;
+  text-align: center;
+  transition: 350ms ease-in-out;
+}
+.planets:hover {
+  transform: translateY(-10px);
+  box-shadow: -2px -2px 4px 2px rgb(255, 255, 255);
+}
+.planets h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+.planets ul {
+  text-align: left;
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #fff;
+}
+.planets li {
+  margin-bottom: 10px;
+}
+.planets img {
+  width: 300px;
+  height: auto;
+  margin-top: 20px;
+}
+.qwe-btn {
+  margin-top: 50px;
+  width: 400px;
+}
+.hidden {
+  display: none;
+}
+
+/* next section */
+
+.black_hole {
+  padding: 50px;
+}
+.black_hole_text {
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgb(136, 51, 247);
+  max-width: 80%;
+  margin-left: 150px;
+  border-radius: 20px;
+}
+.black_hole_text h2 {
+  font-size: 35px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.black_hole_text p {
+  font-size: 22px;
+  line-height: 50px;
+  max-width: 70%;
+  margin: 0 auto;
+  font-weight: 500;
+}
+.black_hole_features {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  margin-bottom: 100px;
+  height: 600px;
+}
+.black_hole_features .text-content {
+  max-width: 50%;
+}
+.black_hole_features h3 {
+  padding-left: 20px;
+  margin-top: 50px;
+  text-align: left;
+  font-size: 40px;
+  text-shadow: 2px 2px 5px rgba(219, 129, 223, 0.5);
+}
+.black_hole_features ol {
+  padding-left: 20px;
+}
+.black_hole_features li {
+  text-align: left;
+  margin-top: 25px;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 45px;
+}
+.black_hole_features img {
+  width: 720px;
+  border-radius: 20px;
+  border: 1px solid white;
+  box-shadow: 1px 1px 5px 1px white;
+  margin-right: 50px;
+  transition: 350ms ease-in-out;
+  cursor: pointer;
+}
+.black_hole_features img:hover {
+  transform: translateY(-20px);
+  box-shadow: -2px -2px 4px 2px rgb(255, 255, 255);
+}
+
+/* next section */
+
+footer {
+  background-color: #636363;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 0;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.footer-left {
+  flex: 1;
+}
+.footer-left h1 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: #f39c12;
+  padding-left: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.footer-left ul {
+  list-style: none;
+  padding-left: 20px;
+  line-height: 30px;
+  font-size: 22;
+}
+.footer-left li {
+  margin-bottom: 8px;
+}
+.footer-right {
+  text-align: start;
+  font-size: 30px;
+  color: #ffffff;
+  flex: 1;
+}
+
+/*Modal*/
+
+.modal-canvas {
+  display: flex;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.5);
+}
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.modal-content {
+  width: 1200px;
+}
+.hidden {
+  display: none;
+}
+
+/* Responsive layout and reduced-motion support */
+img { max-width: 100%; height: auto; }
+.galaxies_container { max-width: 1100px; margin: 0 auto 50px; padding: 24px; gap: 24px; }
+.galaxies_images img { display: block; width: 100%; padding: 0; }
+.milky_way, .M87 { width: min(100%, 700px); height: auto; padding: 24px; }
+.milky_way img, .M87 img { width: 100%; height: auto; }
+.black_hole_text { margin: 0 auto; padding: 24px; }
+.black_hole_features { height: auto; gap: 32px; }
+.black_hole_features img { width: min(48%, 720px); margin: 0; }
+.planets { max-width: 100%; }
+.planets img { width: min(100%, 300px); }
+@media (max-width: 760px) {
+  header { padding: 22px 16px; }
+  .first { font-size: 15px; text-align: center; }
+  .navigation ul { gap: 18px; flex-wrap: wrap; justify-content: center; }
+  .navigation a { font-size: 17px; }
+  .main { height: 65vh; }
+  .main_q h2 { font-size: 42px; }
+  .space { margin: 30px 0 90px; padding: 0 20px; font-size: 18px; }
+  .space_text { width: 100%; }
+  .space_text p, .galaxies_text p, .solar_text p, .black_hole_text p { line-height: 1.7; font-size: 18px; }
+  .galaxies { padding: 14px; margin-bottom: 70px; }
+  .galaxies_container, .galaxies_our, .black_hole_features { flex-direction: column; }
+  .galaxies_text { padding: 10px; }
+  .galaxies_images { width: 100%; }
+  .milky_way, .M87 { margin: 18px 0; }
+  .solar_system, .black_hole { padding: 24px 16px; }
+  .planets { flex-basis: 100%; }
+  .qwe-btn { width: min(100%, 400px); font-size: 21px; }
+  .black_hole_text { max-width: 100%; }
+  .black_hole_text p { max-width: 100%; }
+  .black_hole_features { margin: 35px 0; }
+  .black_hole_features .text-content, .black_hole_features img { max-width: 100%; width: 100%; }
+  .black_hole_features h3 { font-size: 30px; }
+  .black_hole_features li { font-size: 18px; line-height: 1.7; }
+  footer { flex-direction: column; align-items: flex-start; gap: 18px; }
+  .footer-left h1 { font-size: 21px; padding-left: 0; }
+  .footer-left ul { padding-left: 0; font-size: 16px; }
+  .footer-right { font-size: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
